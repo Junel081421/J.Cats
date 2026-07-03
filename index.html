@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junel Cataquiz - Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-gray-900 via-red-800 to-orange-700 
+               text-white p-6 flex items-center justify-between shadow-lg">
+    
+    <!-- Profile picture -->
+    <a href="https://www.linkedin.com/in/junel-cataquiz-abba1a198/" target="_blank">
+      <img src="profile.jpg" alt="Junel Cataquiz" 
+           class="w-20 h-20 rounded-full border-4 border-white shadow-lg hover:scale-105 transition-transform">
+    </a>
+
+    <!-- Name & title -->
+    <div class="text-center flex-1">
+      <h1 id="name" class="text-4xl font-extrabold tracking-wide drop-shadow-lg">Junel Cataquiz</h1>
+      <p id="title" class="text-lg opacity-90"> Virtual Assistant | Data Entry | Appointment Setter</p>
+    </div>
+
+    <!-- Toggle button -->
+    <button id="toggleMode" 
+      class="flex items-center gap-2 px-3 py-2 text-sm bg-white text-blue-600 rounded-full shadow-md hover:bg-gray-200 
+             dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 transition">
+      <span id="toggleIcon">☀️</span>
+    </button>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-gradient-to-r from-gray-900 via-red-800 to-orange-700
+               text-white p-2 flex justify-center gap-4 shadow-lg nav-gradient">
+    <!-- About -->
+    <a href="#about" class="group relative px-4 py-2 rounded-md text-white font-semibold transition duration-500 ease-in-out">
+      <span class="block group-hover:-translate-y-5 group-hover:opacity-0 transition">About</span>
+      <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-5xl">📖</span>
+    </a>
+
+    <!-- Skills -->
+    <a href="#skills" class="group relative px-4 py-2 rounded-md text-white font-semibold transition duration-500 ease-in-out">
+      <span class="block group-hover:-translate-y-5 group-hover:opacity-0 transition">Skills</span>
+      <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-5xl">🛠️</span>
+    </a>
+
+    <!-- Experience -->
+    <a href="#experience" class="group relative px-4 py-2 rounded-md text-white font-semibold transition duration-500 ease-in-out">
+      <span class="block group-hover:-translate-y-5 group-hover:opacity-0 transition">Experience</span>
+      <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-5xl">💼</span>
+    </a>
+
+    <!-- Education -->
+    <a href="#education" class="group relative px-4 py-2 rounded-md text-white font-semibold transition duration-500 ease-in-out">
+      <span class="block group-hover:-translate-y-5 group-hover:opacity-0 transition">Education</span>
+      <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-5xl">🎓</span>
+    </a>
+
+    <!-- Contact -->
+   <a href="#contact" class="group relative px-4 py-2 rounded-md text-white font-semibold transition duration-500 ease-in-out">
+  <span class="block group-hover:-translate-y-5 group-hover:opacity-0 transition">Contact</span>
+  <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-5xl">📞</span>
+</a>
+
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="p-8 fade-slide bg-gray-50 dark:bg-gray-800 dark:text-gray-100 rounded">
+  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+    About
+    <!-- Info icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+            d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+    </svg>
+  </h2>
+    <p>
+      Detail‑oriented professional specializing in data entry, scheduling, and client coordination. With experience in managing records, preparing reports, and setting appointments, I ensure accuracy and efficiency in every task. My background in logistics and administrative support has trained me to handle sensitive information with precision while maintaining clear communication with stakeholders. I take pride in being reliable, organized, and proactive — whether it’s updating databases, arranging meetings, or following up with clients. My goal is to deliver seamless support that helps teams stay focused and productive.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="p-8 fade-slide bg-gray-50 dark:bg-gray-800 dark:text-gray-100 rounded">
+    <h2 class="text-2xl font-bold mb-4">Skills</h2>
+    <div id="skillsList" class="space-y-4"></div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="p-8 fade-slide bg-gray-50 dark:bg-gray-800 dark:text-gray-100 rounded">
+    <h2 class="text-2xl font-bold mb-4">Experience</h2>
+
+    <!-- Philippine Coast Guard -->
+    <details class="mb-4 border border-gray-400 dark:border-gray-600 rounded-lg shadow hover:shadow-lg">
+      <summary class="cursor-pointer px-6 py-4 font-semibold flex justify-between items-center">
+        <span>Philippine Coast Guard</span>
+        <span class="text-indigo-500">➕</span>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700 dark:text-gray-300">
+        <p class="font-medium">Public Servant - Coast Guard Legislative Liaison Affairs, Logistics Division (2022–Present)</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Handled logistics coordination and liaison work</li>
+          <li>Prepared reports and documentation for legislative affairs</li>
+          <li>Supported operational planning and resource management</li>
+          <li>Assisted in logistics coordination and operational support activities in a fast-paced public service environment.</li>
+          <li>Demonstrated strong organizational, communication, and problem solving skills while managing multiple responsibilities.</li>
+          <li>Applied a disciplined, mission-focused approach with a strong commitment to professionalism, accountability, and teamwork.</li>
+          <li>Performed effectively under pressure while supporting time-sensitive and mission-critical operations.</li>
+          <li>Maintained a high level of integrity, confidentiality, and ethical standards in all aspects of work.</li>
+          <li>Contributed to a culture of continuous improvement, learning, and professional development within the organization.</li>
+          <li>Collaborated with colleagues and stakeholders to achieve organizational goals and objectives, while fostering positive relationships and effective communication.</li>
+          <li>Demonstrated adaptability and flexibility in responding to changing priorities, operational demands, and emerging challenges.</li>
+          <li>Maintained a strong focus on safety, compliance, and regulatory requirements in all logistics and operational activities.</li>
+          <li>Provided support for training and development initiatives, helping to enhance the skills and capabilities of team members.</li>
+          <li> Actively participated in cross-functional teams and projects, contributing to the successful execution of organizational initiatives and objectives.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Western Digital Philippines -->
+    <details class="mb-4 border border-gray-400 dark:border-gray-600 rounded-lg shadow hover:shadow-lg">
+      <summary class="cursor-pointer px-6 py-4 font-semibold flex justify-between items-center">
+        <span>Western Digital Philippines</span>
+        <span class="text-indigo-500">➕</span>
+      </summary>
+      <div class="px-6 pb-4 text-gray-700 dark:text-gray-300">
+        <p class="font-medium">Process Technician, Head Gimbal Assembly (2017–2022)</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Performed preventive and corrective maintenance</li>
+          <li>Conducted root cause analysis for production issues</li>
+          <li>Provided end-user support and troubleshooting</li>
+          <li>Collaborated with cross-functional teams to resolve technical issues</li>
+          <li>Maintained detailed documentation for processes and procedures</li>
+          <li>Ensured compliance with safety and quality standards in all operations</li>
+          <li>Trained and mentored new team members on technical skills and best practices</li>
+          <li>Participated in continuous improvement initiatives to enhance production efficiency and product quality</li>
+          <li>Demonstrated strong problem-solving skills and the ability to work effectively under pressure in a fast-paced manufacturing environment</li>
+          <li>Contributed to a culture of teamwork, accountability, and continuous learning within the organization</li>
+          <li>Utilized technical expertise to support the successful launch of new products and processes, ensuring high-quality standards and customer satisfaction</li>
+          <li>Maintained a strong focus on safety, quality, and efficiency in all aspects of work, consistently meeting or exceeding performance metrics and production targets</li>
+          <li> Actively participated in cross-functional teams to identify and implement process improvements, resulting in increased productivity and reduced downtime</li>
+          <li> Demonstrated adaptability and flexibility in responding to changing production demands and priorities, while maintaining a high level of performance and quality</li>
+          <li> Maintained a positive and professional attitude, fostering a collaborative and supportive work environment for colleagues and team members</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section id="certifications" class="py-4 px-6 fade-slide bg-gray-50 dark:bg-gray-800 dark:text-gray-100 rounded">
+  <h2 class="text-2xl font-bold mb-4">Certifications & Training</h2>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+    <li>Computer System Servicing (CSS) NC II – TESDA</li>
+    <li>CompTIA A+ (Ongoing)</li>
+  </ul>
+</section>
+
+
+
+
+  <!-- Education Section -->
+  <section id="education" class="py-12 bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">Education</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- College -->
+        <a href="https://maps.app.goo.gl/miiWy9UVQ9CRpXPZ7" target="_blank" 
+           class="flex items-center bg-white dark:bg-gray-700 shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+          <span class="text-3xl text-indigo-500 mr-4">🎓</span>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Southern Luzon State University - Lucena City</h3>
+            <p class="text-gray-600 dark:text-gray-400">College</p>
+          </div>
+        </a>
+        <!-- High School -->
+        <a href="https://maps.app.goo.gl/5WgR37qhnvNei93FA" target="_blank" 
+           class="flex items-center bg-white dark:bg-gray-700 shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+          <span class="text-3xl text-indigo-500 mr-4">🏫</span>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Guinayangan National High School</h3>
+            <p class="text-gray-600 dark:text-gray-400">High School</p>
+          </div>
+
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="p-8 fade-slide bg-gray-50 dark:bg-gray-800 dark:text-gray-100 rounded">
+    <h2 class="text-2xl font-bold mb-4">Contact</h2>
+    <p>Email: <span id="email"></span></p>
+    <p>Phone: <span id="phone"></span></p>
+    <p>Website: <span id="website"></span></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
